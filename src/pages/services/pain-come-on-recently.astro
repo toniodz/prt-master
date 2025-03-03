@@ -1,0 +1,203 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+
+const meta = {
+  title: "Physiotherapy Included | Reprocess Your Pain",
+  description: "Physiotherapy services combined with pain reprocessing therapy for both acute and chronic pain management."
+};
+
+const physiotherapySkills = [
+  "Physical Assessment and Analysis",
+  "Manual Therapy and Myofascial Release",
+  "Cognitive Multisensory Rehabilitation",
+  "Exercise and Activity Programmes",
+  "Rehab in Water: Aquatic Therapy Specialist",
+  "Health Coaching to Reach Your Goals",
+  "Life Balancing: Making the Right Changes",
+  "Pain Reprocessing Therapy",
+  "Emotional Awareness and Expression Therapy"
+];
+
+const conditionsTreated = [
+  "Acute and Chronic Injuries",
+  "CRPS, Chronic pain, Persistent, Neuroplastic and Nociplastic pain",
+  "Back, Neck and Head pain including all spinal disorders",
+  "Neurological or Neuropathic pain",
+  "Hip, Pelvic pain and Interstitial Cystitis",
+  "Rheumatological conditions including Osteoarthritis",
+  "Tendonitis or Overuse injuries",
+  "Arm, hand, lower leg, and foot problems",
+  "Whole body pains like Fibromyalgia",
+  "Myofascial and Joint pains",
+  "Recurring abdominal pains",
+  "Facial pain",
+  "Neurological or neuropathic pain"
+];
+---
+
+<Layout {...meta}>
+  <div class="bg-gradient-to-b from-primary/5 to-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h1 class="text-[clamp(2rem,5vw,2.75rem)] leading-[1.2] font-bold text-[#1A1A1A] mb-6">
+          Physiotherapy Included
+        </h1>
+        <p class="text-[clamp(1.125rem,3vw,1.5rem)] text-gray-700 mb-8">
+          Although I specialize in treating people with chronic pain, pain reprocessing is also highly effective for treating regular aches and pains. Pain reprocessing is included in any regular physiotherapy I do and regular physiotherapy is also included in your pain reprocessing- when helpful.
+        </p>
+        <Button href="/booking">
+          Book Your Session
+        </Button>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-lg max-w-4xl mx-auto">
+        <img 
+          src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0067.jpg"
+          alt="Professional physiotherapy session"
+          class="w-full h-[500px] object-cover"
+        />
+      </div>
+    </div>
+  </div>
+
+      <!-- Patient Testimonial -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <blockquote class="relative">
+          <div class="relative z-10">
+            <p class="text-xl leading-relaxed text-gray-800 text-center mb-8">
+              “I received very clear instruction and guidance on physical exercises to do at home. My knee and pelvic issues definitely improved after just one session”
+            </p>
+            <footer class="text-center">
+              <cite class="text-lg font-medium text-gray-900 not-italic">— Anonymous</cite>
+            </footer>
+          </div>
+          <div class="absolute -inset-x-8 -inset-y-4 bg-[#E5DEFF]/30 rounded-2xl"></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-lg text-gray-700">
+            People I see with short-term pain are getting better more quickly with these therapies and are avoiding the pain becoming chronic. Regular aches, pains and sprains--including those from arthritis-- can all be helped by pain reprocessing.
+          </p>
+          
+          <p class="text-lg text-gray-700">
+            Whether your pain is acute or chronic, I will bring all my experience and training as a physiotherapist to help you get better.
+          </p>
+
+          <div class="mt-12">
+            <h2 class="text-2xl font-bold mb-6">Physiotherapy Skills:</h2>
+            <ul class="space-y-3">
+              {physiotherapySkills.map(skill => (
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="text-lg text-gray-700">{skill}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-[#F7FAFC] rounded-lg p-8 relative min-h-[600px] overflow-hidden">
+          <img 
+            src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0088.jpg" 
+            alt="Professional physiotherapy session" 
+            class="absolute inset-0 w-full h-full object-cover rounded-lg"
+          />
+          <div class="absolute inset-0 bg-black/20 rounded-lg"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Patient Testimonial -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <blockquote class="relative">
+          <div class="relative z-10">
+            <p class="text-xl leading-relaxed text-gray-800 text-center mb-8">
+              "I went to see Caroline when I had a very painful shoulder. Another physiotherapist had mentioned the possibility of injections, and I wanted to explore other options. Caroline gave me some great exercises to do but also talked to me about what was going on in my life and why my body may be reacting to my stress by giving me pain; as a kind of cry for help. I found Caroline's way of explaining pain incredibly new and thought provoking. I was not the best patient in terms of keeping to my exercise routine, but by changing the narrative surrounding the acute pain in my shoulder and by addressing the other things going on in my life, it has got better."
+            </p>
+            <footer class="text-center">
+              <cite class="text-lg font-medium text-gray-900 not-italic">— Anonymous</cite>
+            </footer>
+          </div>
+          <div class="absolute -inset-x-8 -inset-y-4 bg-[#E5DEFF]/30 rounded-2xl"></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="bg-[#F7FAFC] rounded-lg p-8 relative min-h-[600px] overflow-hidden">
+          <img 
+            src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0072.jpg" 
+            alt="Professional physiotherapy techniques" 
+            class="absolute inset-0 w-full h-full object-cover rounded-lg"
+          />
+          <div class="absolute inset-0 bg-black/20 rounded-lg"></div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-12">Injuries, Conditions and Pain Treated:</h2>
+          <div class="space-y-4">
+            {conditionsTreated.map(condition => (
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-lg text-gray-700">{condition}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Caroline Quote -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <blockquote class="relative">
+          <div class="relative z-10">
+            <p class="text-xl leading-relaxed text-gray-800 text-center mb-8">
+              "Coming to see me for recent pain is a smart idea. Get better quicker and avoid developing chronic pain."
+            </p>
+            <footer class="text-center">
+              <cite class="text-lg font-medium text-gray-900 not-italic">— Caroline Davies</cite>
+            </footer>
+          </div>
+          <div class="absolute -inset-x-8 -inset-y-4 bg-[#E5DEFF]/30 rounded-2xl"></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-[2rem] font-bold mb-6">Ready to Begin Your Journey to Recovery?</h2>
+      <p class="text-xl text-gray-600 mb-12">Take the first step towards lasting relief today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <Button href="/booking">Book a Free 15 min. Consultation</Button>
+        <Button href="/contact" variant="secondary">Ask me a Question</Button>
+      </div>
+    </div>
+  </section>
+</Layout>

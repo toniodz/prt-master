@@ -1,0 +1,83 @@
+---
+const testimonials = [
+  {
+    content: "Pain Reprocessing Therapy with Caroline was brilliant. I had chronic back pain for over 2 years and as someone with a very physical career it was a really devastating experience. Following the treatment I pretty much never experience pain, which has really changed how my body works and I feel how I did before I had it.",
+    author: "ZS",
+    date: "2 months ago",
+    additionalContent: "I also really appreciate that Caroline gives a physiotherapy assessment before proceeding, to check that the treatment is right for you and that reprocessing your pain will not risk worsening anything physically/you're safe in your body. I'm therefore really grateful that she offers the treatment physically in person too."
+  },
+  {
+    content: "Caroline is truly excellent at helping you reprocess pain signals. She was recommended by the Pain Specialist I consulted and did a tremendous job helping me to understand, reduce and manage my pain. I would recommend her very highly to anyone dealing with pain issues. She is personable, never patronised you and is very empathetic. All in all, a great person to help with pain issues.",
+    author: "Anonymous"
+  }
+];
+---
+
+<section class="bg-[#F9F5FF] py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-[2rem] font-bold text-center mb-4">Feeling Overwhelmed and Hopeless?</h2>
+    <p class="text-center text-gray-600 mb-12">Many of my patients have felt this way...</p>
+    
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+        {testimonials.map(testimonial => (
+          <div class="swiper-slide">
+            <div class="bg-white rounded-lg p-8 shadow-sm mx-4">
+              <p class="text-gray-600 italic mb-6 text-lg">{testimonial.content}</p>
+              {testimonial.additionalContent && (
+                <p class="text-gray-600 italic mb-6 text-lg">{testimonial.additionalContent}</p>
+              )}
+              <div class="flex items-center justify-between">
+                <p class="font-semibold text-gray-800">— {testimonial.author}</p>
+                {testimonial.date && (
+                  <p class="text-sm text-gray-500">{testimonial.date}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="swiper-pagination mt-8"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+
+  new Swiper('.testimonialSwiper', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      }
+    }
+  });
+</script>
+
+<style>
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #4B7B4B;
+    opacity: 0.3;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+</style>

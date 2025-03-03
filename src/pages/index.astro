@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import { getPosts } from '../lib/wordpress';
+
+const meta = {
+  title: "Pain Reprocessing Therapy | Reprocess your Pain",
+  description: "Expert pain reprocessing therapy in the UK. Break free from chronic pain with evidence-based treatment. Book your free discovery call with Caroline Davies today.",
+  keywords: "pain reprocessing therapy, chronic pain treatment, pain management UK, Caroline Davies, chronic pain relief"
+};
+
+const posts = await getPosts();
+const latestPosts = posts.slice(0, 3);
+---
+
+<Layout {...meta}>
+  <!-- Hero with Image Background -->
+  <div class="relative min-h-[80vh] flex items-center">
+    <div class="absolute inset-0">
+      <img 
+        src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0179.jpg"
+        alt="Caroline Davies providing pain therapy"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-[2.75rem] leading-[1.2] font-bold mb-6 text-white">
+          Helping You Get Out of Pain and Back to Your Life
+        </h1>
+        <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+          Start turning your pain off with Pain Reprocessing Therapy: a new approach that goes right to where your body creates pain.
+        </p>
+        <Button href="/contact" class="text-lg px-8 py-3">Book an Appointment</Button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your Journey Out of Pain Begins Here -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-[2rem] font-bold text-center mb-16 text-[#1A1A1A]">Your Journey Out of Pain Begins Here</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card
+          title="Struggling with Pain?"
+          description="Even hope can be painful. It helps to understand why traditional treatments might not have worked."
+          href="/services/struggling-with-pain"
+        />
+        <Card
+          title="Pain Reprocessing Therapy"
+          description="Learn about this evidence-based approach to treating pain at its source."
+          href="/services/pain-reprocessing-therapy"
+        />
+        <Card
+          title="Already Tried it But Still in Pain?"
+          description="Common hurdles to doing this on your own."
+          href="/services/self-help"
+        />
+        <Card
+          title="Physiotherapy Included"
+          description="Regular physiotherapy has a place alongside pain reprocessing and vice versa. I do both!"
+          href="/services/pain-come-on-recently"
+        />
+        <Card
+          title="For Medical Professionals"
+          description="Could this help your patients? Research and Training Links. Working together for your patients."
+          href="/services/medical-professionals"
+        />
+        <Card
+          title="Individual and Group Sessions"
+          description="Flexible options to suit your needs. Choose from one-to-one sessions or join supportive group therapy."
+          href="/fees"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- First Testimonial -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <blockquote class="relative">
+          <div class="relative z-10">
+            <p class="text-xl leading-relaxed text-gray-800 text-center mb-8">
+              "Pain Reprocessing Therapy with Caroline was brilliant. I had chronic back pain for over 2 years and as someone with a very physical career it was a really devastating experience. Following the treatment I pretty much never experience pain, which has really changed how my body works and I feel how I did before I had it."
+            </p>
+            <footer class="text-center">
+              <cite class="text-lg font-medium text-gray-900 not-italic">— Anonymous</cite>
+            </footer>
+          </div>
+          <div class="absolute -inset-x-8 -inset-y-4 bg-[#E5DEFF]/30 rounded-2xl"></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your Journey to Relief Starts Here -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-[2rem] font-bold text-center mb-16 text-[#1A1A1A]">Your Journey to Relief Starts Here</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative group overflow-hidden rounded-lg transform transition-transform duration-300 hover:-translate-y-2">
+          <div class="aspect-[4/3]">
+            <img 
+              src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0154-1.jpg"
+              alt="Understanding Pain"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:bg-black/50"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-semibold mb-2 text-white">Understand Your Pain</h3>
+              <p class="text-white/90">Gain insights into the mind-body connection and your pain experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg transform transition-transform duration-300 hover:-translate-y-2">
+          <div class="aspect-[4/3]">
+            <img 
+              src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0010-1.jpg"
+              alt="Learn Techniques"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:bg-black/50"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-semibold mb-2 text-white">Learn Techniques</h3>
+              <p class="text-white/90">Master evidence-based techniques to rewire your brain's pain response.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative group overflow-hidden rounded-lg transform transition-transform duration-300 hover:-translate-y-2">
+          <div class="aspect-[4/3]">
+            <img 
+              src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0208-1.jpg"
+              alt="Reclaim Your Life"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:bg-black/50"></div>
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-semibold mb-2 text-white">Reclaim Your Life</h3>
+              <p class="text-white/90">Build confidence and return to the activities you love.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <img 
+            src="https://wordpress-416581-5252380.cloudwaysapps.com/wp-content/uploads/2025/02/CAROLINE0190.jpg"
+            alt="Caroline Davies, Pain Reprocessing Therapist" 
+            class="rounded-lg shadow-lg w-full h-[600px] object-cover"
+          />
+          <div class="absolute inset-0 bg-primary/10 rounded-lg"></div>
+        </div>
+        <div class="space-y-6">
+          <h2 class="text-[2rem] font-bold">About Caroline</h2>
+          <p class="text-lg text-gray-700">
+            Hi, I'm Caroline Davies, a physiotherapist specialising in Pain Reprocessing Therapy. I combine medical expertise and a compassionate approach to help you break free from chronic pain. Together, we'll uncover the root causes of your pain and create a plan to help you return to enjoying your life again.
+          </p>
+          <Button href="/about">Learn More About Me</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Feed Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-[2rem] font-bold text-center mb-4">Explore Insights and Resources</h2>
+      <p class="text-center text-gray-600 mb-12">Latest articles and insights about pain science and recovery</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {latestPosts.map(post => (
+          <a 
+            href={`/blog/${post.slug}`}
+            class="group block bg-gradient-to-br from-white via-primary/5 to-primary/10 p-0 rounded-[10px] border border-gray-100 shadow-[0_1px_2px_rgba(0,0,0,0.06)] hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+          >
+            {post.featuredImage?.thumbnail && (
+              <div class="aspect-[16/9] w-full">
+                <img 
+                  src={post.featuredImage.thumbnail} 
+                  alt={post.featuredImage.alt}
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <div class="p-8">
+              <div class="flex items-center justify-between mb-4">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
+                  Treatment Innovation
+                </span>
+                <span class="text-sm text-gray-500">{post.readTime}</span>
+              </div>
+              
+              <h3 class="text-2xl font-bold mb-2 text-gray-900">
+                {post.title}
+              </h3>
+              
+              <p class="text-sm text-gray-500 mb-4">{post.date}</p>
+              
+              <div class="text-gray-600 mb-6 line-clamp-3" set:html={post.excerpt} />
+              
+              <div class="inline-flex items-center text-primary font-medium gap-2">
+                Read Article
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14"/>
+                  <path d="m12 5 7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center">
+        <Button href="/blog" variant="secondary">
+          Explore More Articles
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Second Testimonial -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <blockquote class="relative">
+          <div class="relative z-10">
+            <p class="text-xl leading-relaxed text-gray-800 text-center mb-8">
+              "I also really appreciate that Caroline gives a physiotherapy assessment before proceeding, to check that the treatment is right for you and that reprocessing your pain will not risk worsening anything physically/you're safe in your body. I'm therefore really grateful that she offers the treatment physically in person too."
+            </p>
+            <footer class="text-center">
+              <cite class="text-lg font-medium text-gray-900 not-italic">— Anonymous</cite>
+            </footer>
+          </div>
+          <div class="absolute -inset-x-8 -inset-y-4 bg-[#E5DEFF]/30 rounded-2xl"></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-[2rem] font-bold mb-4">Ready to Begin Your Journey to Recovery?</h2>
+      <p class="text-xl text-gray-600 mb-12">Take the first step towards lasting relief today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <Button href="/booking">Book a Free 15 min. Consultation Call</Button>
+        <Button href="/contact" variant="secondary">Ask me a Question</Button>
+      </div>
+    </div>
+  </section>
+</Layout>

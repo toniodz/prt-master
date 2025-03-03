@@ -1,0 +1,60 @@
+---
+import Head from '../components/Head.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head title={title} description={description} keywords={keywords} />
+  <body>
+    <header class="fixed w-full bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Navigation />
+      </div>
+    </header>
+    <main class="pt-16">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 75, 123, 75;
+    --accent-light: 229, 222, 255;
+    --accent-dark: 61, 98, 61;
+  }
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: white;
+    color: #333;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  /* Add soft rounded corners to all images */
+  img {
+    border-radius: 0.75rem; /* 12px */
+  }
+  /* Override border-radius for specific cases where images are inside rounded containers */
+  .rounded-lg img {
+    border-radius: 0.5rem; /* 8px */
+  }
+  .rounded-full img {
+    border-radius: 9999px;
+  }
+</style>
